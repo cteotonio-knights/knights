@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knight.API", "Knight.API\Knight.API.csproj", "{158CA790-D6AC-42E0-8F12-E2DF27D5A45B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158CA790-D6AC-42E0-8F12-E2DF27D5A45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158CA790-D6AC-42E0-8F12-E2DF27D5A45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158CA790-D6AC-42E0-8F12-E2DF27D5A45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158CA790-D6AC-42E0-8F12-E2DF27D5A45B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42B497C7-9BE4-411E-9C91-5991E079AFC3}
+	EndGlobalSection
+EndGlobal

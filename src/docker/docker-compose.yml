@@ -1,0 +1,47 @@
+version: '3'
+name: "btg-knight"
+services:
+  mongodb_server:
+    image: mongo
+    container_name: mongodb-container
+    hostname: mongodb_server
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+    volumes:
+      - mongodb_data:/data/db
+
+  microsservice_knights:
+    build:
+      context: ../SlnKnight.API/
+      dockerfile: Knight.API/Dockerfile
+    container_name: microsservice_knights
+    ports:
+      - "8089:8089" 
+    networks:
+      - backend
+    depends_on:
+      - mongodb_server
+    links:
+      - mongodb_server
+
+  web:
+    build:
+      context: ../TesteVueApp/testevueapp.client/
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - backend
+    depends_on:
+      - microsservice_knights
+    links:
+      - microsservice_knights
+
+volumes:
+  mongodb_data:
+
+networks:
+  backend:
+    driver: bridge
